@@ -24,6 +24,6 @@ we chose to convert a single function to test into java then write our Junit tes
  
 ## Authors
 
-Brian Donaghey
-Benjamin Gradeck
-Branden Lientz
+- Brian Donaghey
+- Benjamin Gradeck
+- Branden Lientz
