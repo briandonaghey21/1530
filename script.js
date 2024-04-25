@@ -26,21 +26,23 @@ function main_driver(e)
         alert("Please enter a proper price");
         return;
     }
-    data[0].x.push(itemName); // graphs
-    data[0].y.push(itemPrice);
-    totalSpent += itemPrice;
+   
+
     var remainingBudget = userBudget - totalSpent;
-    if (remainingBudget < 0)
+    if (itemPrice > remainingBudget) 
     {
-        alert("You ran out of money.");
+        alert("This item exceeds your remaining budget.");
         return;
     }
+    totalSpent += itemPrice;
+    remainingBudget -= itemPrice;
     var budgetDisplay = document.getElementById('budgetDisplay');
     budgetDisplay.textContent = "Remaining budget: $" + remainingBudget.toFixed(2);
+
+    data[0].x.push(itemName); // graphs
+    data[0].y.push(itemPrice);
     plot(userBudget);
     
-
-
 }
 
 function plot(userBudget) 
