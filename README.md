@@ -41,6 +41,6 @@ we chose to convert a single function to test into java then write our Junit tes
  
 ## Authors
 
-- Brian Donaghey: Devel
+- Brian Donaghey
 - Branden Lientz
 - Benjamin Gradeck
