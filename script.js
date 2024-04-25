@@ -37,7 +37,7 @@ function main_driver(e)
     totalSpent += itemPrice;
     remainingBudget -= itemPrice;
     var budgetDisplay = document.getElementById('budgetDisplay');
-    budgetDisplay.textContent = "Remaining budget: $" + remainingBudget.toFixed(2);
+    budgetDisplay.textContent = "Remaining budget: $" + remainingBudget.toFixed(2); // add the additional cents
 
     data[0].x.push(itemName); // graphs
     data[0].y.push(itemPrice);
