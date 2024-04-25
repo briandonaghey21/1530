@@ -28,11 +28,17 @@ function main_driver(e)
     }
     data[0].x.push(itemName); // graphs
     data[0].y.push(itemPrice);
-    plot(userBudget);
     totalSpent += itemPrice;
     var remainingBudget = userBudget - totalSpent;
+    if (remainingBudget < 0)
+    {
+        alert("You ran out of money.");
+        return;
+    }
     var budgetDisplay = document.getElementById('budgetDisplay');
     budgetDisplay.textContent = "Remaining budget: $" + remainingBudget.toFixed(2);
+    plot(userBudget);
+    
 
 
 }
