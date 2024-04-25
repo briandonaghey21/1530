@@ -58,6 +58,7 @@ function plot(userBudget)
     Plotly.newPlot("myPlot", data, layout);
 }
  // We could use node.js to implement a permanent file that could be written to containing all the data thats ever been written in this app. However, in two sprint meetings we could not achieve this.
+ // So we're stuck with downloading a singular file containing the data.
 function downloadTextFile() 
 {
     var userBudget = parseFloat(document.getElementById("budget").value); 
