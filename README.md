@@ -17,6 +17,9 @@ Mini-Scrum Simulation on Finance System Team Project
 
 ## Scrum Details and Timeline
 
+Description:
+- We implemented Scrum by first assigning our roles then going about the meeting and iteration cycles as seen in the timeline below. All meeting results are documented. 
+
 Roles: 
 - Brian Donaghey: Developer, Product Owner
 - Branden Lientz: Developer, Scrum Master
