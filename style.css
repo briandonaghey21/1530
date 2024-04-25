@@ -1,0 +1,56 @@
+body{
+    background-color: rgb(255, 229, 189);
+    color: rgb(34, 34, 34);
+    font-family: system-ui;
+    
+}
+
+.container{
+    display: flex;
+    height:75%;
+}
+
+.title{
+    
+    font-size: 40;
+    margin: 30px;
+    display: flexbox;
+}
+
+#myPlot{
+    display: flexbox;
+    margin:40px;
+    
+    
+}
+
+
+.formStuff{
+    display: flexbox;
+    margin: 60px;
+    display: inline-block;
+    
+}
+
+.formStuff input{
+    border-radius: 10px;
+    width: 150px;
+    height: 30px;
+    padding:5px;
+    margin: 8px 2px 20px;
+
+}
+.formStuff label{
+    font-size: 20px;
+
+    
+}
+
+.formStuff button{
+    width:75px;
+    height:35;
+}
+
+.moneyForm{
+    
+}
