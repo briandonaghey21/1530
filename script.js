@@ -58,3 +58,23 @@ function plot(userBudget)
     Plotly.newPlot("myPlot", data, layout);
 }
 
+function downloadTextFile() 
+{
+    var userBudget = parseFloat(document.getElementById("budget").value); 
+    var remainingBudget = userBudget - totalSpent; 
+    var text = "Budget Details:\n";
+    text += "Initial Budget: $" + userBudget.toFixed(2) + "\n";
+    text += "Total Spent: $" + totalSpent.toFixed(2) + "\n";
+    text += "Remaining Budget: $" + remainingBudget.toFixed(2) + "\n";
+    text += "Items Purchased:\n";
+
+    for (let i = 0; i < data[0].x.length; i++) 
+        text += data[0].x[i] + " - $" + data[0].y[i].toFixed(2) + "\n"; // go through the graph
+    var blob = new Blob([text], {type: 'text/plain'}); // we have to use a blob to write to a text file. We can't write individuall and just have to write a big string.
+
+    var a = document.createElement("a");
+    a.href = URL.createObjectURL(blob);
+    a.download = "budget-details-for-current_user.txt";
+    document.body.appendChild(a);
+    a.click();
+}

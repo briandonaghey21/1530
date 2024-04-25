@@ -54,3 +54,15 @@ body{
     height:35;
 }
 
+.buttonformatting {
+    display: flex; /* Use 'flex', not 'flexbox' */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+  
+}
+
+button {
+    width: 75px; /* Width of the button */
+    height: 35px; /* Height of the button, added missing unit 'px' */
+    cursor: pointer; /* Optional: Changes the cursor to a pointer when hovering over the button */
+}
