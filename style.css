@@ -2,12 +2,15 @@ body{
     background-color: rgb(255, 229, 189);
     color: rgb(34, 34, 34);
     font-family: system-ui;
+    text-align:left;
     
 }
 
 .container{
     display: flex;
     height:75%;
+    float:left;
+    margin-top:30px;
 }
 
 .title{
