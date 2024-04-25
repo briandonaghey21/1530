@@ -15,6 +15,9 @@ Mini-Scrum Simulation on Finance System Team Project
 3. Start a live server of the index.html document
 4. Fill out HTML document fields as prompted.
 
+## Scrum Details and Timeline
+
+
 
 ## Notes
 
