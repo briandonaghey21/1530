@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <!-- defining all the JavaScript functions used in this project -->
     <link rel="stylesheet" href="style.css">
     <script type="text/javascript" src="script.js"></script>
     <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
@@ -12,34 +11,29 @@
 
 <body>
     <h1 class="title">Budget Planning App</h1>
+    <div class="formStuff">
+        <h2>Add an Item To Your Budget:</h2>
+        <form id="budgetForm">
+            <label for="budget">Please Enter Your Budget:</label>
+            <br>
+            <input type="text" id="budget" name="budget" placeholder="Enter Budget:">
+            <br>
+            <label for="itemName">Expense Name:</label>
+            <br>
+            <input type="text" id="itemName" name="itemName" placeholder="Enter Item:">
+            <br>
+            <label for="itemPrice">Price:</label>
+            <br>
+            <input type="text" id="itemPrice" name="itemPrice" placeholder="Price:">
+            <br>    
+        </form>
+        <button type="button" onclick="main_driver(event)">Enter!</button>
+        <p id="budgetDisplay">Remaining budget: $</p> 
+    </div>
     <div class="container">
-        
-        
         <div id="myPlot"></div>
         <div id="myPlot2"></div>
-        <!-- running the main_driver method -->
-        
-
-
-        <!--<script type="text/javascript"> main_driver() </script>-->
-        <div class="formStuff">
-            <h2>Add an Item To Your Budget:</h2>
-            <form>
-                <label for="itemName">Item Name</label>
-                <br>
-                <input type="text" id="itemName" name="itemName" placeholder="Enter Item:">
-                <br>
-                <label for="itemPrice">Price</label>
-                <br>
-                <input type="text" id="itemPrice" name="itemPrice" placeholder="price:">
-                <br>
-            </form>
-            <button type="submit" onclick="addItem(event)">Enter!</button>
-
-        </div>
     </div>
-
-
 </body>
 
 </html>

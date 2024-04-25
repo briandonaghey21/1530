@@ -2,11 +2,13 @@ body{
     background-color: rgb(255, 229, 189);
     color: rgb(34, 34, 34);
     font-family: system-ui;
+    text-align: center;
     
 }
 
 .container{
     display: flex;
+    justify-content: center;
     height:75%;
 }
 
@@ -30,6 +32,7 @@ body{
     margin: 60px;
     display: inline-block;
     
+    
 }
 
 .formStuff input{
@@ -51,6 +54,3 @@ body{
     height:35;
 }
 
-.moneyForm{
-    
-}

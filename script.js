@@ -1,49 +1,51 @@
-/*
-THIS IS AWESOME AND BEN GRADECK PROGRAMMED DA WHOLE THING!!!
-GIVE ME A 100% please please please please please please please please please please please please please
-please please please please please please please please please please please please please please please
-please please please please please please please pleasepleaseplease please pleaseplease pleaseplease please
-*/
+
 var data =[{
     x: [],
     y: [],
     type: 'bar'
 }];
 
+var totalSpent  = 0;
+function main_driver(e) 
+{
+    var userBudget = parseFloat(document.getElementById("budget").value); 
+    if (isNaN(userBudget)  || userBudget < 0) 
+    {
+        alert("Please enter a valid budget.");
+        return;
+    }
+    var itemName = document.getElementById("itemName").value;
+    var itemPrice = parseFloat(document.getElementById("itemPrice").value);
+    if (!itemName)
+    {
+        alert("Please enter an expense name");
+        return;
+    }
+    if (isNaN(itemPrice) || itemPrice < 0) 
+    {
+        alert("Please enter a proper price");
+        return;
+    }
+    data[0].x.push(itemName); // graphs
+    data[0].y.push(itemPrice);
+    plot(userBudget);
+    totalSpent += itemPrice;
+    var remainingBudget = userBudget - totalSpent;
+    var budgetDisplay = document.getElementById('budgetDisplay');
+    budgetDisplay.textContent = "Remaining budget: $" + remainingBudget.toFixed(2);
 
-function main_driver(e) {
-    
-    
-    addItem(e);
-    //data[1].push(5);
-    //add("bemmy");
-    //plotStuff();
-    //Plotly.newPlot("myPlot", data, layout);
+
 }
 
-function addItem(e){
-    e.preventDefault();
-    var itemName = document.getElementById("itemName");
-    var itemPrice = document.getElementById("itemPrice");
-    data[0].x.push(itemName.value);
-    data[0].y.push(parseInt(itemPrice.value));
-    plotStuff();
-
-
-    
-}
-
-function addMoney(){
-    //this needs to keep track if there is 50 dollars and 50/n is greater than the amount lft
-    //you need to split the money so like if it totally covers it
-    //you need to take the excess and distribute it to other things
-}
-
-function plotStuff(){
+function plot(userBudget) 
+{
     const layout = {
-        xaxis: {title: "Item/s" },
-        yaxis: { title: "Price" },
-        title: "Items to budgetFor"
+        xaxis: { title: "Items"},
+        yaxis: {
+            title: "Price",
+            range: [0, userBudget] 
+        },
+        title: "Items to Budget For"
     };
     Plotly.newPlot("myPlot", data, layout);
 }
